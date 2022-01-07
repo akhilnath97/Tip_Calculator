@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css" />
+    <title>Tip_Calculator</title>
+  </head>
+  <body>
+    <main>
+      <h1><i>Tip Calculator</i></h1>
+      <div>
+        <label>How much was your bill?</label>
+        <input type="number" id="bill_amount" />
+        <br>
+        <label>How was your service?</label>
+        <input type="number"id="tip_perc" />
+        <br>
+        <label>How many people are sharing the bill?</label>
+        <input type="text" id="total_tip" />
+        <br>
+        <button id="button" onclick="tipcalculator()">Calculate</button>
+        <br>
+        <br>
+        <h2>Tip Amount</h2>
+        <input type="text" id="output" name="Tip value"/>
+        <h2>Each</h2>
+        <br>
+      </div>
+
+    </main>
+  </body>
+</html>
+<script>
+    const tipcalculator = () => {
+    
+    let amt = document.getElementById('bill_amount').value;
+    let tip_page = document.getElementById('tip_perc').value;
+    let totaltip=document.getElementById('total_tip').value;
+    let totat = (amt*(tip_page/100));
+    let perhead=totat/totaltip;
+   document.getElementById('output').value=perhead;
+   
+    
+
+   
+}
+</script>
